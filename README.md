@@ -28,10 +28,10 @@ All language-model calls use `grok-4.3` on the xAI API; embeddings run locally.
 2. [Quick start](#quick-start)
 3. [The research, phase by phase](#the-research-phase-by-phase)
 4. [What we landed on](#what-we-landed-on)
-5. [Eval suites and results in this repository](#eval-suites-and-results-in-this-repository)
-6. [Repository layout](#repository-layout)
-7. [Limitations and open problems](#limitations-and-open-problems)
-8. [Cost](#cost)
+5. [Latency and scaling](#latency-and-scaling)
+6. [Eval suites and results in this repository](#eval-suites-and-results-in-this-repository)
+7. [Repository layout](#repository-layout)
+8. [Limitations and open problems](#limitations-and-open-problems)
 9. [Licence](#licence)
 
 ---
@@ -123,7 +123,7 @@ Implemented and measured; useful for auditability and human review, with no meas
 | `profile` | standing profile rebuilt from current facts (never from its own last version), every bullet citing fact ids |
 | `conflicts` | each new fact compared with similar older ones and marked duplicate, updates or contradicts; nothing deleted; every decision logged |
 | `threads` | facts grouped into persistent topics or storylines, with `list_threads` and `get_thread` |
-| `offload` | older tool outputs shrink to stubs that `open_ref` restores (raised cost: it breaks the prompt cache) |
+| `offload` | older tool outputs shrink to stubs that `open_ref` restores (no gain on short agent loops; it breaks the prompt cache) |
 | `budget` | cap on searches per question |
 | `export_views()` | profile and threads as Markdown with fact ids, for analysts |
 
@@ -166,7 +166,7 @@ scripts/run_dataset.sh markets mine                    # every pre-registered ar
 ```
 
 Builders exist for `markets`, `football`, `sec_filings`, `fedreg`, `world_quiz`, `iran_headlines`, `quakes`, `weather`
-and `combined`. `world_quiz`, `iran_headlines` and `fedreg` use a few dollars of LLM calls to write or verify questions.
+and `combined`. `world_quiz`, `iran_headlines` and `fedreg` make LLM calls to write or verify questions.
 
 **Conversations** (LongMemEval-S, downloaded separately; see [`evals/longmemeval/README.md`](evals/longmemeval/README.md)):
 
@@ -277,15 +277,16 @@ prioritised facts with topics, a standing profile, non-destructive conflict reso
 offload of the agent's working memory, a search budget, and drill-down with Markdown views. Chosen on the dev split,
 tested once on 413 held-out questions, then attributed:
 
-| Configuration | LongMemEval-S test | USD per question |
-|---|---|---|
-| previous best (v6 + speaker facts) | 82.3% | 0.037 |
-| v7 chosen on dev (profile, conflicts, typed ranking) | 86.4% (p = 0.019) | 0.032 |
-| v7 extraction only (topic, type, priority per fact) | **87.2%** (p = 0.008) | **0.026** |
+| Configuration | LongMemEval-S test |
+|---|---|
+| previous best (v6 + speaker facts) | 82.3% |
+| v7 chosen on dev (profile, conflicts, typed ranking) | 86.4% (p = 0.019) |
+| v7 extraction only (topic, type, priority per fact) | **87.2%** (p = 0.008) |
 
 The gain came entirely from the richer extraction. The profile, conflict resolution and priority ranking added no
 measurable accuracy; threads hurt on normal sessions and did not help on an interleaved channel (unrelated same-day
-conversations mixed message by message, 89.1% either way); offload raised cost 24% by breaking the prompt cache. On
+conversations mixed message by message, 89.1% either way); offload saved no tokens on agent loops of about three calls
+and lowered the share of input served from the prompt cache from 38% to 30%. On
 feeds no addition helped. Full report: [`docs/v7_results.md`](docs/v7_results.md).
 
 ---
@@ -303,12 +304,75 @@ feeds no addition helped. Full report: [`docs/v7_results.md`](docs/v7_results.md
 
 ---
 
+## Latency and scaling
+
+Measured on one laptop (Apple Silicon, 18 cores) with SQLite, brute-force NumPy vectors and local embeddings: no
+search cluster, no GPU, no approximate index.
+
+### Ingest: how fast a new item becomes searchable
+
+| Step | Throughput |
+|---|---|
+| SQL row + keyword index (append-only) | ~550,000 items/s |
+| Embedding, headline-length text (~100 chars), CPU | ~540 items/s |
+| Embedding, long chat turn (~1,400 chars), CPU | ~50 items/s |
+| Fact extraction (conversation configuration only) | one LLM call per day-batch of messages, off the answer path |
+
+A burst of 10,000 headlines is findable by keyword immediately and by meaning within about 20 seconds on a single CPU.
+Embedding is the only ingest step that needs scaling for a firehose (GPU or a batching service).
+
+### Retrieval: time per lookup as the corpus grows
+
+Median milliseconds, single thread ([`docs/bench_retrieval.md`](docs/bench_retrieval.md); rows beyond 339k are
+synthetic copies of real headlines):
+
+| Items | Vector search | Keyword (BM25) top-100 | SQL count by date | SQL full-text scan |
+|---|---|---|---|---|
+| 10,000 | 0.1 | 0.4 | 0.0 | 1.0 |
+| 339,210 | 5.0 | 17.3 | 0.6 | 34.9 |
+| 1,000,000 | 15.8 | 55.4 | 2.1 | 106.8 |
+| 3,000,000 | 44.4 | 164.4 (p95 706) | 6.3 | 312.7 |
+
+Everything grows roughly linearly and stays under a second at 3 million items.
+
+### Answers: where the time goes
+
+About 99% of answer time is model calls; search, SQL and Python together take about 0.1%. A typical answer uses three
+model calls. Answer latency therefore does **not** grow with corpus size; it depends on the question:
+
+| Dataset (agentic_sql_v3) | Items in memory | Median | p90 |
+|---|---|---|---|
+| fedreg | 783 | 14.1 s | 26.6 s |
+| sec_filings | 958 | 17.0 s | 26.7 s |
+| football (league tables computed in Python) | 2,114 | 24.9 s | 50.0 s |
+| markets | 4,990 | 15.5 s | 26.9 s |
+| world_quiz | 13,066 | 9.8 s | 22.7 s |
+| iran_headlines | 339,210 | 16.5 s | 29.2 s |
+
+By design (medians across six datasets): single-shot retrieval 8-10 s, search agents 13-16 s, the conversation
+configuration 18.5 s. These were measured with many experiments sharing the API; a quieter repeat run gave a median of
+12.6 s and p90 of 26.5 s.
+
+### Scaling path
+
+| Corpus | What changes |
+|---|---|
+| up to ~3M items | nothing: one machine, every lookup under a second |
+| 3M-30M items | approximate nearest-neighbour vectors, tables partitioned by month, a dedicated keyword index |
+| 30M+ items | a distributed search engine with hybrid search and hard filters, a partitioned SQL or columnar store for the rows, GPU embedding |
+
+Answer latency is set by the number of agent steps and the model's speed. For sub-second reads, the next step is an
+always-current fast path: state per entity and topic kept up to date in the background and pushed as alerts when it
+changes, with the agent reserved for deep questions.
+
+---
+
 ## Eval suites and results in this repository
 
 - [`evals/`](evals/README.md): the quiz for each dataset (questions, gold answers, categories, ask times) and its dataset
   card. Item streams are rebuilt locally by the builders.
 - [`results/`](results/README.md): graded outputs for every run the reports rely on (25 runs, compressed), run stats,
-  per-run reports, tool traces for the final designs, the audit, the judge validation, and a numbers-only cost ledger.
+  per-run reports, tool traces for the final designs, the audit and the judge validation.
 
 ---
 
@@ -316,7 +380,7 @@ feeds no addition helped. Full report: [`docs/v7_results.md`](docs/v7_results.md
 
 ```
 factbase/
-  llm.py            xAI chat-completions client over plain HTTP: request cache, cost ledger, spend cap
+  llm.py            xAI chat-completions client over plain HTTP: request cache, call log, spend cap
   embed.py          local embeddings (bge-small-en-v1.5 via fastembed), cached
   index.py          hybrid BM25 (SQLite FTS5) + dense index with hard time filters
   paths.py          where data, eval suites and results live
@@ -332,11 +396,11 @@ factbase/
     run.py          replay on a simulated clock
     grade.py        blind grading (numeric check + strict judge)
     judge_check.py  adversarial validation of the grader
-    analyze.py      cross-run tables, retention, McNemar tests, cost
+    analyze.py      cross-run tables, retention, McNemar tests, latency
     audit_summary.py, v7_report.py, longmemeval.py
 scripts/            run_dataset.sh (all architectures on one dataset), bench_retrieval.py (latency to 3M rows)
 evals/              eval suites and dataset cards
-results/            graded outputs, stats, reports, audit, cost ledger
+results/            graded outputs, stats, reports, audit
 docs/               pre-registrations, method, results, findings, trust, layers, architecture
 ```
 
@@ -355,15 +419,6 @@ docs/               pre-registrations, method, results, findings, trust, layers,
   conversations and temporal reasoning (about 83%), noisy headlines (about 80-88% after grading corrections).
 - **Untested:** multi-party channels with interleaved threads; corpora beyond about 3M items.
 - One model family answered everything (grok-4.3, replicated on grok-4.7 for a sample).
-
----
-
-## Cost
-
-The whole programme cost **$1,074.67** in API calls (140,139 calls): about $814 answering questions (including
-rolling-summary compaction), $247 ingestion (fact extraction, digests, conflict checks, profiles), $11 dataset building
-and $3 grading. Embeddings ran locally. The committed `results/cost_ledger.jsonl.gz` holds every call's tag, tokens and
-cost.
 
 ---
 
