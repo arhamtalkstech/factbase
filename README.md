@@ -31,8 +31,7 @@ All language-model calls use `grok-4.3` on the xAI API; embeddings run locally.
 5. [Latency and scaling](#latency-and-scaling)
 6. [Eval suites and results in this repository](#eval-suites-and-results-in-this-repository)
 7. [Repository layout](#repository-layout)
-8. [Limitations and open problems](#limitations-and-open-problems)
-9. [Licence](#licence)
+8. [Licence](#licence)
 
 ---
 
@@ -403,22 +402,6 @@ evals/              eval suites and dataset cards
 results/            graded outputs, stats, reports, audit
 docs/               pre-registrations, method, results, findings, trust, layers, architecture
 ```
-
----
-
-## Limitations and open problems
-
-- **Truth in noisy sources is not solved.** The memory finds and reasons over what was said; it does not yet weigh source
-  reliability, count independent confirmations or track whether a claim was later confirmed. A fair test needs social
-  posts from after the model's training cutoff with outcomes labelled later; the replay bench already supports it.
-- **Prototype, not a service.** SQLite, NumPy and a local sandbox; no streaming ingestion, access control or always-current
-  fast path. Answers take a median 12.6 seconds. [`docs/architecture.md`](docs/architecture.md) maps each part to
-  production components.
-- **Entity matching is basic** (normalised names only).
-- **Weakest measured areas:** year-over-year "change" questions on weather (about 60-70%), counting across many
-  conversations and temporal reasoning (about 83%), noisy headlines (about 80-88% after grading corrections).
-- **Untested:** multi-party channels with interleaved threads; corpora beyond about 3M items.
-- One model family answered everything (grok-4.3, replicated on grok-4.7 for a sample).
 
 ---
 
