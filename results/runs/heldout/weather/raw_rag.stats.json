@@ -1,0 +1,13 @@
+{
+  "dataset": "weather",
+  "arch": "raw_rag",
+  "run": "heldout",
+  "items": 8760,
+  "questions": 215,
+  "seconds": 927.4,
+  "spend_usd_this_process": 13.3539,
+  "memory": {
+    "items": 8760
+  },
+  "cfg": {}
+}

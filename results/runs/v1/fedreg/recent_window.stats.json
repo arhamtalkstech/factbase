@@ -1,0 +1,13 @@
+{
+  "dataset": "fedreg",
+  "arch": "recent_window",
+  "run": "v1",
+  "items": 783,
+  "questions": 259,
+  "seconds": 32.9,
+  "spend_usd_this_process": 0.7548,
+  "memory": {
+    "window_items": 43
+  },
+  "cfg": {}
+}

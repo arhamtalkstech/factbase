@@ -1,0 +1,17 @@
+{
+  "dataset": "football",
+  "arch": "agentic_sql_v3",
+  "run": "rep2",
+  "items": 2114,
+  "questions": 60,
+  "seconds": 705.1,
+  "spend_usd_this_process": 28.7386,
+  "memory": {
+    "facts": 0,
+    "status": {},
+    "supersessions": 0,
+    "raw": 2114,
+    "digests": 0
+  },
+  "cfg": {}
+}

@@ -1,0 +1,21 @@
+{
+  "dataset": "markets",
+  "arch": "factbase_nodigest",
+  "run": "v1",
+  "items": 4990,
+  "questions": 242,
+  "seconds": 811.8,
+  "spend_usd_this_process": 64.0409,
+  "memory": {
+    "facts": 9538,
+    "status": {
+      "current": 34,
+      "event": 324,
+      "superseded": 9180
+    },
+    "supersessions": 9180,
+    "raw": 4990,
+    "digests": 0
+  },
+  "cfg": {}
+}

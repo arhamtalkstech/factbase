@@ -1,0 +1,29 @@
+{
+  "dataset": "world_quiz",
+  "arch": "factbase_v7f",
+  "run": "v7news",
+  "items": 13066,
+  "questions": 265,
+  "seconds": 5085.0,
+  "spend_usd_this_process": 86.2052,
+  "memory": {
+    "facts": 15016,
+    "status": {
+      "current": 1051,
+      "event": 13795,
+      "superseded": 170
+    },
+    "supersessions": 171,
+    "raw": 13066,
+    "digests": 0,
+    "threads": 1957,
+    "relations": {
+      "updates": 91,
+      "contradicts": 9,
+      "duplicate": 9
+    },
+    "profile_builds": 0,
+    "ingest_usd_conflicts_profile": 0.389
+  },
+  "cfg": {}
+}

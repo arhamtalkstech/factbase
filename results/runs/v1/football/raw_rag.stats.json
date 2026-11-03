@@ -1,0 +1,13 @@
+{
+  "dataset": "football",
+  "arch": "raw_rag",
+  "run": "v1",
+  "items": 2114,
+  "questions": 256,
+  "seconds": 807.4,
+  "spend_usd_this_process": 17.7725,
+  "memory": {
+    "items": 2114
+  },
+  "cfg": {}
+}

@@ -1,0 +1,11 @@
+{
+  "dataset": "quakes",
+  "arch": "closed_book",
+  "run": "heldout",
+  "items": 16259,
+  "questions": 217,
+  "seconds": 305.5,
+  "spend_usd_this_process": 12.7821,
+  "memory": {},
+  "cfg": {}
+}

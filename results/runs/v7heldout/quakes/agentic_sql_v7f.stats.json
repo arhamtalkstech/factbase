@@ -1,0 +1,21 @@
+{
+  "dataset": "quakes",
+  "arch": "agentic_sql_v7f",
+  "run": "v7heldout",
+  "items": 16259,
+  "questions": 217,
+  "seconds": 771.7,
+  "spend_usd_this_process": 28.353,
+  "memory": {
+    "facts": 0,
+    "status": {},
+    "supersessions": 0,
+    "raw": 16259,
+    "digests": 0,
+    "threads": 0,
+    "relations": {},
+    "profile_builds": 0,
+    "ingest_usd_conflicts_profile": 0.0
+  },
+  "cfg": {}
+}

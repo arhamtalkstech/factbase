@@ -1,0 +1,13 @@
+{
+  "dataset": "sec_filings",
+  "arch": "raw_rag",
+  "run": "v1",
+  "items": 958,
+  "questions": 259,
+  "seconds": 713.9,
+  "spend_usd_this_process": 15.7234,
+  "memory": {
+    "items": 958
+  },
+  "cfg": {}
+}

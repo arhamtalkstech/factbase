@@ -1,0 +1,15 @@
+{
+  "dataset": "quakes",
+  "arch": "rolling_summary",
+  "run": "heldout",
+  "items": 16259,
+  "questions": 217,
+  "seconds": 7995.4,
+  "spend_usd_this_process": 173.7347,
+  "memory": {
+    "compactions": 74,
+    "summary_words": 2648,
+    "ingest_usd": 3.6661438000000004
+  },
+  "cfg": {}
+}

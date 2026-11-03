@@ -1,0 +1,21 @@
+{
+  "dataset": "world_quiz",
+  "arch": "agentic_sql_v7f_no_budget",
+  "run": "v7feeds",
+  "items": 13066,
+  "questions": 60,
+  "seconds": 4.6,
+  "spend_usd_this_process": 0.0479,
+  "memory": {
+    "facts": 0,
+    "status": {},
+    "supersessions": 0,
+    "raw": 13066,
+    "digests": 0,
+    "threads": 0,
+    "relations": {},
+    "profile_builds": 0,
+    "ingest_usd_conflicts_profile": 0.0
+  },
+  "cfg": {}
+}

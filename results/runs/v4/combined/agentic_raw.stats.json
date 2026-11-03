@@ -1,0 +1,13 @@
+{
+  "dataset": "combined",
+  "arch": "agentic_raw",
+  "run": "v4",
+  "items": 361121,
+  "questions": 378,
+  "seconds": 1567.0,
+  "spend_usd_this_process": 56.466,
+  "memory": {
+    "items": 361121
+  },
+  "cfg": {}
+}

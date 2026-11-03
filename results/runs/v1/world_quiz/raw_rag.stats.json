@@ -1,0 +1,13 @@
+{
+  "dataset": "world_quiz",
+  "arch": "raw_rag",
+  "run": "v1",
+  "items": 13066,
+  "questions": 265,
+  "seconds": 905.0,
+  "spend_usd_this_process": 67.7548,
+  "memory": {
+    "items": 13066
+  },
+  "cfg": {}
+}

@@ -1,0 +1,11 @@
+{
+  "dataset": "football",
+  "arch": "closed_book",
+  "run": "v1",
+  "items": 2114,
+  "questions": 256,
+  "seconds": 350.2,
+  "spend_usd_this_process": 7.6509,
+  "memory": {},
+  "cfg": {}
+}

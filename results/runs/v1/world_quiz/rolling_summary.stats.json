@@ -1,0 +1,15 @@
+{
+  "dataset": "world_quiz",
+  "arch": "rolling_summary",
+  "run": "v1",
+  "items": 13066,
+  "questions": 265,
+  "seconds": 6548.8,
+  "spend_usd_this_process": 320.251,
+  "memory": {
+    "compactions": 83,
+    "summary_words": 3844,
+    "ingest_usd": 3.273023000000001
+  },
+  "cfg": {}
+}

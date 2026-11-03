@@ -1,0 +1,13 @@
+{
+  "dataset": "sec_filings",
+  "arch": "fact_memory",
+  "run": "v1",
+  "items": 958,
+  "questions": 259,
+  "seconds": 935.1,
+  "spend_usd_this_process": 32.1227,
+  "memory": {
+    "facts": 2901
+  },
+  "cfg": {}
+}

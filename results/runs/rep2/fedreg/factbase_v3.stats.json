@@ -1,0 +1,21 @@
+{
+  "dataset": "fedreg",
+  "arch": "factbase_v3",
+  "run": "rep2",
+  "items": 783,
+  "questions": 60,
+  "seconds": 315.0,
+  "spend_usd_this_process": 15.8728,
+  "memory": {
+    "facts": 3405,
+    "status": {
+      "current": 975,
+      "event": 2264,
+      "superseded": 166
+    },
+    "supersessions": 165,
+    "raw": 783,
+    "digests": 442
+  },
+  "cfg": {}
+}

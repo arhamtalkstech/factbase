@@ -1,0 +1,11 @@
+{
+  "dataset": "world_quiz",
+  "arch": "closed_book",
+  "run": "v2",
+  "items": 13066,
+  "questions": 265,
+  "seconds": 1.9,
+  "spend_usd_this_process": 0.1034,
+  "memory": {},
+  "cfg": {}
+}

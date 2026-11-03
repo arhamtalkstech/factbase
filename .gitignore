@@ -1,0 +1,32 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Local data: item streams, raw downloads, LLM and embedding caches (rebuilt by the dataset builders)
+data/
+
+# Working state of local runs (indexes, SQLite files, logs). Graded outputs, stats and reports are committed.
+results/runs/**/*.work/
+results/runs/**/*.log
+results/runs/**/*.out
+results/runs/**/*.answers.jsonl
+results/runs/**/*.graded.jsonl
+results/runs/**/report_stdout.txt
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

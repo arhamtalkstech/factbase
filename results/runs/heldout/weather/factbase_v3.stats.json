@@ -1,0 +1,21 @@
+{
+  "dataset": "weather",
+  "arch": "factbase_v3",
+  "run": "heldout",
+  "items": 8760,
+  "questions": 215,
+  "seconds": 1793.8,
+  "spend_usd_this_process": 36.7832,
+  "memory": {
+    "facts": 34896,
+    "status": {
+      "current": 3312,
+      "event": 5292,
+      "superseded": 26292
+    },
+    "supersessions": 26292,
+    "raw": 8760,
+    "digests": 859
+  },
+  "cfg": {}
+}

@@ -1,0 +1,17 @@
+{
+  "dataset": "iran_headlines",
+  "arch": "rolling_summary",
+  "run": "v1",
+  "items": 339210,
+  "questions": 257,
+  "seconds": 12228.1,
+  "spend_usd_this_process": 358.5114,
+  "memory": {
+    "compactions": 247,
+    "summary_words": 1516,
+    "ingest_usd": 28.34254300000001
+  },
+  "cfg": {
+    "buffer_tokens": 40000
+  }
+}

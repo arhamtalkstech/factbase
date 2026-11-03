@@ -1,0 +1,21 @@
+{
+  "dataset": "weather",
+  "arch": "agentic_sql_v7f",
+  "run": "v7heldout",
+  "items": 8760,
+  "questions": 215,
+  "seconds": 1335.4,
+  "spend_usd_this_process": 35.5606,
+  "memory": {
+    "facts": 0,
+    "status": {},
+    "supersessions": 0,
+    "raw": 8760,
+    "digests": 0,
+    "threads": 0,
+    "relations": {},
+    "profile_builds": 0,
+    "ingest_usd_conflicts_profile": 0.0
+  },
+  "cfg": {}
+}

@@ -1,0 +1,15 @@
+{
+  "dataset": "weather",
+  "arch": "rolling_summary",
+  "run": "heldout",
+  "items": 8760,
+  "questions": 215,
+  "seconds": 6354.9,
+  "spend_usd_this_process": 145.3467,
+  "memory": {
+    "compactions": 55,
+    "summary_words": 2419,
+    "ingest_usd": 2.4208680500000006
+  },
+  "cfg": {}
+}

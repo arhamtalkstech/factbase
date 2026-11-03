@@ -1,0 +1,17 @@
+{
+  "dataset": "weather",
+  "arch": "agentic_sql_v3",
+  "run": "heldout",
+  "items": 8760,
+  "questions": 215,
+  "seconds": 1713.8,
+  "spend_usd_this_process": 40.6039,
+  "memory": {
+    "facts": 0,
+    "status": {},
+    "supersessions": 0,
+    "raw": 8760,
+    "digests": 0
+  },
+  "cfg": {}
+}

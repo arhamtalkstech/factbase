@@ -1,0 +1,17 @@
+{
+  "dataset": "world_quiz",
+  "arch": "agentic_sql_v3",
+  "run": "rep1",
+  "items": 13066,
+  "questions": 60,
+  "seconds": 410.1,
+  "spend_usd_this_process": 13.8831,
+  "memory": {
+    "facts": 0,
+    "status": {},
+    "supersessions": 0,
+    "raw": 13066,
+    "digests": 0
+  },
+  "cfg": {}
+}

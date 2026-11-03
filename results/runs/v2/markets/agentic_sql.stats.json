@@ -1,0 +1,17 @@
+{
+  "dataset": "markets",
+  "arch": "agentic_sql",
+  "run": "v2",
+  "items": 4990,
+  "questions": 242,
+  "seconds": 923.5,
+  "spend_usd_this_process": 76.7339,
+  "memory": {
+    "facts": 0,
+    "status": {},
+    "supersessions": 0,
+    "raw": 4990,
+    "digests": 0
+  },
+  "cfg": {}
+}

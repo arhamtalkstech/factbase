@@ -1,0 +1,13 @@
+{
+  "dataset": "markets",
+  "arch": "raw_rag",
+  "run": "v1",
+  "items": 4990,
+  "questions": 242,
+  "seconds": 764.6,
+  "spend_usd_this_process": 17.0682,
+  "memory": {
+    "items": 4990
+  },
+  "cfg": {}
+}

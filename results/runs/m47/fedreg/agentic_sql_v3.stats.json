@@ -1,0 +1,17 @@
+{
+  "dataset": "fedreg",
+  "arch": "agentic_sql_v3",
+  "run": "m47",
+  "items": 783,
+  "questions": 60,
+  "seconds": 2.5,
+  "spend_usd_this_process": 0.0246,
+  "memory": {
+    "facts": 0,
+    "status": {},
+    "supersessions": 0,
+    "raw": 783,
+    "digests": 0
+  },
+  "cfg": {}
+}

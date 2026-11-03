@@ -1,0 +1,15 @@
+{
+  "dataset": "markets",
+  "arch": "rolling_summary",
+  "run": "v1",
+  "items": 4990,
+  "questions": 242,
+  "seconds": 2345.7,
+  "spend_usd_this_process": 69.8514,
+  "memory": {
+    "compactions": 23,
+    "summary_words": 983,
+    "ingest_usd": 0.88957435
+  },
+  "cfg": {}
+}

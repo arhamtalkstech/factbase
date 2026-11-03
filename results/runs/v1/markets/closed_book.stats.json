@@ -1,0 +1,11 @@
+{
+  "dataset": "markets",
+  "arch": "closed_book",
+  "run": "v1",
+  "items": 4990,
+  "questions": 242,
+  "seconds": 392.0,
+  "spend_usd_this_process": 8.3183,
+  "memory": {},
+  "cfg": {}
+}

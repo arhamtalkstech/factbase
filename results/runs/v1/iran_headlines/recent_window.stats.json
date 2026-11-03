@@ -1,0 +1,13 @@
+{
+  "dataset": "iran_headlines",
+  "arch": "recent_window",
+  "run": "v1",
+  "items": 339210,
+  "questions": 257,
+  "seconds": 462.6,
+  "spend_usd_this_process": 20.0502,
+  "memory": {
+    "window_items": 702
+  },
+  "cfg": {}
+}

@@ -1,0 +1,13 @@
+{
+  "dataset": "fedreg",
+  "arch": "raw_rag",
+  "run": "v1",
+  "items": 783,
+  "questions": 259,
+  "seconds": 563.4,
+  "spend_usd_this_process": 35.5041,
+  "memory": {
+    "items": 783
+  },
+  "cfg": {}
+}

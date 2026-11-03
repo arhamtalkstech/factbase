@@ -1,0 +1,13 @@
+{
+  "dataset": "iran_headlines",
+  "arch": "agentic_raw",
+  "run": "rep2",
+  "items": 339210,
+  "questions": 60,
+  "seconds": 351.4,
+  "spend_usd_this_process": 13.5611,
+  "memory": {
+    "items": 339210
+  },
+  "cfg": {}
+}

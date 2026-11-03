@@ -1,0 +1,13 @@
+{
+  "dataset": "world_quiz",
+  "arch": "fact_memory",
+  "run": "v1",
+  "items": 13066,
+  "questions": 265,
+  "seconds": 582.5,
+  "spend_usd_this_process": 11.0092,
+  "memory": {
+    "facts": 15618
+  },
+  "cfg": {}
+}

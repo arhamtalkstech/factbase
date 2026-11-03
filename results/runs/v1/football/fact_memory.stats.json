@@ -1,0 +1,13 @@
+{
+  "dataset": "football",
+  "arch": "fact_memory",
+  "run": "v1",
+  "items": 2114,
+  "questions": 256,
+  "seconds": 606.7,
+  "spend_usd_this_process": 43.1384,
+  "memory": {
+    "facts": 2947
+  },
+  "cfg": {}
+}

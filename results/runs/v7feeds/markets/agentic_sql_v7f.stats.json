@@ -1,0 +1,21 @@
+{
+  "dataset": "markets",
+  "arch": "agentic_sql_v7f",
+  "run": "v7feeds",
+  "items": 4990,
+  "questions": 60,
+  "seconds": 401.5,
+  "spend_usd_this_process": 14.0567,
+  "memory": {
+    "facts": 0,
+    "status": {},
+    "supersessions": 0,
+    "raw": 4990,
+    "digests": 0,
+    "threads": 0,
+    "relations": {},
+    "profile_builds": 0,
+    "ingest_usd_conflicts_profile": 0.0
+  },
+  "cfg": {}
+}

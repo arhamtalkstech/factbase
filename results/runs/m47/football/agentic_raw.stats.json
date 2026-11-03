@@ -1,0 +1,13 @@
+{
+  "dataset": "football",
+  "arch": "agentic_raw",
+  "run": "m47",
+  "items": 2114,
+  "questions": 60,
+  "seconds": 2.3,
+  "spend_usd_this_process": 0.0188,
+  "memory": {
+    "items": 2114
+  },
+  "cfg": {}
+}

@@ -1,0 +1,13 @@
+{
+  "dataset": "iran_headlines",
+  "arch": "raw_rag",
+  "run": "v1",
+  "items": 339210,
+  "questions": 257,
+  "seconds": 649.8,
+  "spend_usd_this_process": 72.6921,
+  "memory": {
+    "items": 339210
+  },
+  "cfg": {}
+}

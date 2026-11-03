@@ -1,0 +1,11 @@
+{
+  "dataset": "weather",
+  "arch": "closed_book",
+  "run": "heldout",
+  "items": 8760,
+  "questions": 215,
+  "seconds": 306.3,
+  "spend_usd_this_process": 12.8115,
+  "memory": {},
+  "cfg": {}
+}

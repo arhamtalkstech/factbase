@@ -1,0 +1,11 @@
+{
+  "dataset": "fedreg",
+  "arch": "closed_book",
+  "run": "v1",
+  "items": 783,
+  "questions": 259,
+  "seconds": 781.2,
+  "spend_usd_this_process": 15.2194,
+  "memory": {},
+  "cfg": {}
+}

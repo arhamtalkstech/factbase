@@ -1,0 +1,19 @@
+{
+  "dataset": "football",
+  "arch": "factbase_v3",
+  "run": "rep1",
+  "items": 2114,
+  "questions": 60,
+  "seconds": 758.9,
+  "spend_usd_this_process": 27.6394,
+  "memory": {
+    "facts": 2947,
+    "status": {
+      "event": 2947
+    },
+    "supersessions": 0,
+    "raw": 2114,
+    "digests": 421
+  },
+  "cfg": {}
+}

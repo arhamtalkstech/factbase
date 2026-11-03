@@ -1,0 +1,17 @@
+{
+  "dataset": "combined",
+  "arch": "agentic_sql_v6f",
+  "run": "feedcard",
+  "items": 361121,
+  "questions": 378,
+  "seconds": 1286.5,
+  "spend_usd_this_process": 30.2465,
+  "memory": {
+    "facts": 0,
+    "status": {},
+    "supersessions": 0,
+    "raw": 361121,
+    "digests": 0
+  },
+  "cfg": {}
+}

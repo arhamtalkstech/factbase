@@ -1,0 +1,21 @@
+{
+  "dataset": "sec_filings",
+  "arch": "agentic_sql_v7f_no_budget",
+  "run": "v7feeds",
+  "items": 958,
+  "questions": 60,
+  "seconds": 2.5,
+  "spend_usd_this_process": 0.0461,
+  "memory": {
+    "facts": 0,
+    "status": {},
+    "supersessions": 0,
+    "raw": 958,
+    "digests": 0,
+    "threads": 0,
+    "relations": {},
+    "profile_builds": 0,
+    "ingest_usd_conflicts_profile": 0.0
+  },
+  "cfg": {}
+}

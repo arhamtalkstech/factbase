@@ -1,0 +1,13 @@
+{
+  "dataset": "football",
+  "arch": "recent_window",
+  "run": "v1",
+  "items": 2114,
+  "questions": 256,
+  "seconds": 837.7,
+  "spend_usd_this_process": 55.5093,
+  "memory": {
+    "window_items": 330
+  },
+  "cfg": {}
+}

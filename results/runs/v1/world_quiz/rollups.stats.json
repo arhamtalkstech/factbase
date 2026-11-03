@@ -1,0 +1,13 @@
+{
+  "dataset": "world_quiz",
+  "arch": "rollups",
+  "run": "v1",
+  "items": 13066,
+  "questions": 265,
+  "seconds": 690.6,
+  "spend_usd_this_process": 9.9982,
+  "memory": {
+    "digests": 858
+  },
+  "cfg": {}
+}

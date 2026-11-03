@@ -1,0 +1,13 @@
+{
+  "dataset": "weather",
+  "arch": "agentic_raw",
+  "run": "heldout",
+  "items": 8760,
+  "questions": 215,
+  "seconds": 1541.5,
+  "spend_usd_this_process": 29.8192,
+  "memory": {
+    "items": 8760
+  },
+  "cfg": {}
+}

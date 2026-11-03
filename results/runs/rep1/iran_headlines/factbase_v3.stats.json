@@ -1,0 +1,21 @@
+{
+  "dataset": "iran_headlines",
+  "arch": "factbase_v3",
+  "run": "rep1",
+  "items": 339210,
+  "questions": 60,
+  "seconds": 423.1,
+  "spend_usd_this_process": 21.1553,
+  "memory": {
+    "facts": 64694,
+    "status": {
+      "current": 6072,
+      "event": 56113,
+      "superseded": 2509
+    },
+    "supersessions": 2508,
+    "raw": 339210,
+    "digests": 839
+  },
+  "cfg": {}
+}

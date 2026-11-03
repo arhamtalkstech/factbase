@@ -1,0 +1,17 @@
+{
+  "dataset": "sec_filings",
+  "arch": "agentic_sql",
+  "run": "v2",
+  "items": 958,
+  "questions": 259,
+  "seconds": 799.0,
+  "spend_usd_this_process": 66.1943,
+  "memory": {
+    "facts": 0,
+    "status": {},
+    "supersessions": 0,
+    "raw": 958,
+    "digests": 0
+  },
+  "cfg": {}
+}

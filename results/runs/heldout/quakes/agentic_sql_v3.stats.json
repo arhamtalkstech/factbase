@@ -1,0 +1,17 @@
+{
+  "dataset": "quakes",
+  "arch": "agentic_sql_v3",
+  "run": "heldout",
+  "items": 16259,
+  "questions": 217,
+  "seconds": 1358.1,
+  "spend_usd_this_process": 32.3844,
+  "memory": {
+    "facts": 0,
+    "status": {},
+    "supersessions": 0,
+    "raw": 16259,
+    "digests": 0
+  },
+  "cfg": {}
+}

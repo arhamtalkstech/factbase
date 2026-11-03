@@ -1,0 +1,17 @@
+{
+  "dataset": "combined",
+  "arch": "agentic_sql_v3",
+  "run": "v4",
+  "items": 361121,
+  "questions": 378,
+  "seconds": 1629.8,
+  "spend_usd_this_process": 131.2118,
+  "memory": {
+    "facts": 0,
+    "status": {},
+    "supersessions": 0,
+    "raw": 361121,
+    "digests": 0
+  },
+  "cfg": {}
+}

@@ -1,0 +1,13 @@
+{
+  "dataset": "markets",
+  "arch": "recent_window",
+  "run": "v1",
+  "items": 4990,
+  "questions": 242,
+  "seconds": 381.7,
+  "spend_usd_this_process": 38.1655,
+  "memory": {
+    "window_items": 511
+  },
+  "cfg": {}
+}

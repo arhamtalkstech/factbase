@@ -1,0 +1,13 @@
+{
+  "dataset": "markets",
+  "arch": "fact_memory",
+  "run": "v1",
+  "items": 4990,
+  "questions": 242,
+  "seconds": 561.1,
+  "spend_usd_this_process": 57.2964,
+  "memory": {
+    "facts": 9538
+  },
+  "cfg": {}
+}

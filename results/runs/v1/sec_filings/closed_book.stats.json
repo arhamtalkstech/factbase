@@ -1,0 +1,11 @@
+{
+  "dataset": "sec_filings",
+  "arch": "closed_book",
+  "run": "v1",
+  "items": 958,
+  "questions": 259,
+  "seconds": 414.9,
+  "spend_usd_this_process": 9.0072,
+  "memory": {},
+  "cfg": {}
+}

@@ -1,0 +1,15 @@
+{
+  "dataset": "sec_filings",
+  "arch": "rolling_summary",
+  "run": "v1",
+  "items": 958,
+  "questions": 259,
+  "seconds": 1831.5,
+  "spend_usd_this_process": 38.261,
+  "memory": {
+    "compactions": 9,
+    "summary_words": 3168,
+    "ingest_usd": 0.372696
+  },
+  "cfg": {}
+}

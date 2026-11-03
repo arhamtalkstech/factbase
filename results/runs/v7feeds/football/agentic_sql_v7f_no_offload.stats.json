@@ -1,0 +1,21 @@
+{
+  "dataset": "football",
+  "arch": "agentic_sql_v7f_no_offload",
+  "run": "v7feeds",
+  "items": 2114,
+  "questions": 60,
+  "seconds": 1167.3,
+  "spend_usd_this_process": 13.7038,
+  "memory": {
+    "facts": 0,
+    "status": {},
+    "supersessions": 0,
+    "raw": 2114,
+    "digests": 0,
+    "threads": 0,
+    "relations": {},
+    "profile_builds": 0,
+    "ingest_usd_conflicts_profile": 0.0
+  },
+  "cfg": {}
+}

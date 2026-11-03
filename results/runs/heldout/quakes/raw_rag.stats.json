@@ -1,0 +1,13 @@
+{
+  "dataset": "quakes",
+  "arch": "raw_rag",
+  "run": "heldout",
+  "items": 16259,
+  "questions": 217,
+  "seconds": 897.5,
+  "spend_usd_this_process": 11.9642,
+  "memory": {
+    "items": 16259
+  },
+  "cfg": {}
+}

@@ -1,0 +1,20 @@
+{
+  "dataset": "quakes",
+  "arch": "factbase_v3",
+  "run": "heldout",
+  "items": 16259,
+  "questions": 217,
+  "seconds": 5381.9,
+  "spend_usd_this_process": 119.2646,
+  "memory": {
+    "facts": 16798,
+    "status": {
+      "current": 24,
+      "event": 16774
+    },
+    "supersessions": 0,
+    "raw": 16259,
+    "digests": 860
+  },
+  "cfg": {}
+}

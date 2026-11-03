@@ -1,0 +1,21 @@
+{
+  "dataset": "combined",
+  "arch": "factbase_v3",
+  "run": "feedcol",
+  "items": 361121,
+  "questions": 378,
+  "seconds": 2280.2,
+  "spend_usd_this_process": 50.2188,
+  "memory": {
+    "facts": 99103,
+    "status": {
+      "current": 9556,
+      "event": 77408,
+      "superseded": 12139
+    },
+    "supersessions": 12129,
+    "raw": 361121,
+    "digests": 900
+  },
+  "cfg": {}
+}

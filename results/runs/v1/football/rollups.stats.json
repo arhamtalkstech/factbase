@@ -1,0 +1,13 @@
+{
+  "dataset": "football",
+  "arch": "rollups",
+  "run": "v1",
+  "items": 2114,
+  "questions": 256,
+  "seconds": 1120.9,
+  "spend_usd_this_process": 33.7616,
+  "memory": {
+    "digests": 421
+  },
+  "cfg": {}
+}

@@ -1,0 +1,73 @@
+{
+  "summary": {
+    "paraphrase": [
+      116,
+      120
+    ],
+    "vague": [
+      117,
+      120
+    ],
+    "near_miss": [
+      119,
+      120
+    ],
+    "verbose": [
+      120,
+      120
+    ]
+  },
+  "disagreements": [
+    {
+      "qid": "sec_filings:q0043@2026-10-31",
+      "kind": "near_miss",
+      "answer": "331.84 billion USD for fiscal year 2025",
+      "want": false,
+      "got": true,
+      "why": "The model states the exact gold value 331.84 (in billions USD) and specifies fiscal year 2025; this matches the gold and satisfies the precision requirement.",
+      "gold": [
+        "331.84"
+      ],
+      "question": "As of 30 September 2026, what annual revenue had Microsoft Corporation reported in its most recent Form 10-K, and for which fiscal year? Give the revenue in billions of USD, two decimals."
+    },
+    {
+      "qid": "fedreg:L0012@2026-08-31",
+      "kind": "vague",
+      "answer": "July 8, 2025 at 12:01 a.m.",
+      "want": false,
+      "got": true,
+      "why": "The model's answer states July 8, 2025 at 12:01 a.m., which matches the gold answer in meaning and substance (the gold specifies '12:01 a.m. eastern daylight time, July 8, 2025' or '12:01 a.m. EDT July 8, 2025').",
+      "gold": [
+        "12:01 a.m. eastern daylight time, July 8, 2025",
+        "12:01 a.m. EDT July 8, 2025"
+      ],
+      "question": "In the Treasury Department's Office of Foreign Assets Control (OFAC) final rule published in the Federal Register on 2025-08-13 (31 CFR Part 528), General License No. 1 under the International Criminal Court-Related Sanctions Regulations, what is the latest time by which wind-down transactions involving Solomy Balungi Bossa must be completed?"
+    },
+    {
+      "qid": "fedreg:L0012@2026-10-31",
+      "kind": "vague",
+      "answer": "July 8, 2025 at 12:01 a.m.",
+      "want": false,
+      "got": true,
+      "why": "The model's answer states July 8, 2025 at 12:01 a.m., which matches the gold answer in meaning and substance (the gold specifies '12:01 a.m. eastern daylight time, July 8, 2025' or '12:01 a.m. EDT July 8, 2025').",
+      "gold": [
+        "12:01 a.m. eastern daylight time, July 8, 2025",
+        "12:01 a.m. EDT July 8, 2025"
+      ],
+      "question": "In the Treasury Department's Office of Foreign Assets Control (OFAC) final rule published in the Federal Register on 2025-08-13 (31 CFR Part 528), General License No. 1 under the International Criminal Court-Related Sanctions Regulations, what is the latest time by which wind-down transactions involving Solomy Balungi Bossa must be completed?"
+    },
+    {
+      "qid": "iran_headlines:q0059@2026-05-31",
+      "kind": "vague",
+      "answer": "An early decision by FIFA regarding an Iranian symbol preceded the team's base relocation.",
+      "want": false,
+      "got": true,
+      "why": "The model states that the FIFA decision came first, which matches the gold answer that FIFA planning to ban the Iranian Lion and Sun flag happened before the Iran team moved its base to Tijuana.",
+      "gold": [
+        "FIFA planning to ban Iranian Lion and Sun flag"
+      ],
+      "question": "Which happened first: FIFA planning to ban the Iranian Lion and Sun flag or the Iran national football team moving its squad base to Tijuana?"
+    }
+  ],
+  "note": "summary covers all six datasets; world_quiz disagreement text omitted (source has no licence)"
+}

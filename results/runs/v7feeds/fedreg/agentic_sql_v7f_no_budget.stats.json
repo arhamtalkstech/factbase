@@ -1,0 +1,21 @@
+{
+  "dataset": "fedreg",
+  "arch": "agentic_sql_v7f_no_budget",
+  "run": "v7feeds",
+  "items": 783,
+  "questions": 60,
+  "seconds": 2.4,
+  "spend_usd_this_process": 0.0723,
+  "memory": {
+    "facts": 0,
+    "status": {},
+    "supersessions": 0,
+    "raw": 783,
+    "digests": 0,
+    "threads": 0,
+    "relations": {},
+    "profile_builds": 0,
+    "ingest_usd_conflicts_profile": 0.0
+  },
+  "cfg": {}
+}

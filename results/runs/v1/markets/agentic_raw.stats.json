@@ -1,0 +1,13 @@
+{
+  "dataset": "markets",
+  "arch": "agentic_raw",
+  "run": "v1",
+  "items": 4990,
+  "questions": 242,
+  "seconds": 1028.0,
+  "spend_usd_this_process": 29.3437,
+  "memory": {
+    "items": 4990
+  },
+  "cfg": {}
+}

@@ -1,0 +1,15 @@
+{
+  "dataset": "football",
+  "arch": "rolling_summary",
+  "run": "v1",
+  "items": 2114,
+  "questions": 256,
+  "seconds": 2661.0,
+  "spend_usd_this_process": 98.2971,
+  "memory": {
+    "compactions": 15,
+    "summary_words": 2693,
+    "ingest_usd": 0.66422025
+  },
+  "cfg": {}
+}

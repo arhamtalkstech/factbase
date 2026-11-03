@@ -1,0 +1,13 @@
+{
+  "dataset": "fedreg",
+  "arch": "agentic_raw",
+  "run": "rep1",
+  "items": 783,
+  "questions": 60,
+  "seconds": 343.4,
+  "spend_usd_this_process": 16.8566,
+  "memory": {
+    "items": 783
+  },
+  "cfg": {}
+}

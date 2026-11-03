@@ -1,0 +1,21 @@
+{
+  "dataset": "world_quiz",
+  "arch": "factbase_noraw",
+  "run": "v1",
+  "items": 13066,
+  "questions": 265,
+  "seconds": 766.6,
+  "spend_usd_this_process": 14.7448,
+  "memory": {
+    "facts": 15618,
+    "status": {
+      "current": 1041,
+      "event": 14505,
+      "superseded": 72
+    },
+    "supersessions": 72,
+    "raw": 0,
+    "digests": 858
+  },
+  "cfg": {}
+}

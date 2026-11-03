@@ -1,0 +1,21 @@
+{
+  "dataset": "sec_filings",
+  "arch": "factbase_v3",
+  "run": "rep1",
+  "items": 958,
+  "questions": 60,
+  "seconds": 331.8,
+  "spend_usd_this_process": 16.3571,
+  "memory": {
+    "facts": 2901,
+    "status": {
+      "current": 1469,
+      "event": 1255,
+      "superseded": 177
+    },
+    "supersessions": 177,
+    "raw": 958,
+    "digests": 492
+  },
+  "cfg": {}
+}

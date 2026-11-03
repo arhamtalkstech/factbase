@@ -1,0 +1,19 @@
+{
+  "dataset": "football",
+  "arch": "factbase_v2_nostruct",
+  "run": "v2",
+  "items": 2114,
+  "questions": 256,
+  "seconds": 1762.2,
+  "spend_usd_this_process": 104.4805,
+  "memory": {
+    "facts": 2947,
+    "status": {
+      "event": 2947
+    },
+    "supersessions": 0,
+    "raw": 2114,
+    "digests": 421
+  },
+  "cfg": {}
+}

@@ -1,0 +1,13 @@
+{
+  "dataset": "world_quiz",
+  "arch": "recent_window",
+  "run": "v1",
+  "items": 13066,
+  "questions": 265,
+  "seconds": 1222.0,
+  "spend_usd_this_process": 49.1731,
+  "memory": {
+    "window_items": 371
+  },
+  "cfg": {}
+}
